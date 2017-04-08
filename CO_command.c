@@ -412,74 +412,74 @@ static void command_process(int fd, char* command, size_t commandLength) {
             }
         }
 
-        /* NMT start node */
-        else if(strcmp(token, "start") == 0) {
-            lastTok(NULL, spaceDelim, &err);
-            if(err == 0 && comm_node > 127) {
-                err = 1;
-                respErrorCode = respErrorNoDefaultNodeSet;
-            }
-            if(err == 0) {
-                err = CO_sendNMTcommand(CO, CO_NMT_ENTER_OPERATIONAL, comm_node) ? 1:0;
-                if(err == 0) respLen = sprintf(resp, "[%d] OK", sequence);
-            }
-        }
+//        /* NMT start node */
+//        else if(strcmp(token, "start") == 0) {
+//            lastTok(NULL, spaceDelim, &err);
+//            if(err == 0 && comm_node > 127) {
+//                err = 1;
+//                respErrorCode = respErrorNoDefaultNodeSet;
+//            }
+//            if(err == 0) {
+//                err = CO_sendNMTcommand(CO, CO_NMT_ENTER_OPERATIONAL, comm_node) ? 1:0;
+//                if(err == 0) respLen = sprintf(resp, "[%d] OK", sequence);
+//            }
+//        }
 
-        /* NMT stop node */
-        else if(strcmp(token, "stop") == 0) {
-            lastTok(NULL, spaceDelim, &err);
-            if(err == 0 && comm_node > 127) {
-                err = 1;
-                respErrorCode = respErrorNoDefaultNodeSet;
-            }
-            if(err == 0) {
-                err = CO_sendNMTcommand(CO, CO_NMT_ENTER_STOPPED, comm_node) ? 1:0;
-                if(err == 0) respLen = sprintf(resp, "[%d] OK", sequence);
-            }
-        }
+//        /* NMT stop node */
+//        else if(strcmp(token, "stop") == 0) {
+//            lastTok(NULL, spaceDelim, &err);
+//            if(err == 0 && comm_node > 127) {
+//                err = 1;
+//                respErrorCode = respErrorNoDefaultNodeSet;
+//            }
+//            if(err == 0) {
+//                err = CO_sendNMTcommand(CO, CO_NMT_ENTER_STOPPED, comm_node) ? 1:0;
+//                if(err == 0) respLen = sprintf(resp, "[%d] OK", sequence);
+//            }
+//        }
 
-        /* NMT Set node to pre-operational */
-        else if(strcmp(token, "preop") == 0 || strcmp(token, "preoperational") == 0) {
-            lastTok(NULL, spaceDelim, &err);
-            if(err == 0 && comm_node > 127) {
-                err = 1;
-                respErrorCode = respErrorNoDefaultNodeSet;
-            }
-            if(err == 0) {
-                err = CO_sendNMTcommand(CO, CO_NMT_ENTER_PRE_OPERATIONAL, comm_node) ? 1:0;
-                if(err == 0) respLen = sprintf(resp, "[%d] OK", sequence);
-            }
-        }
+//        /* NMT Set node to pre-operational */
+//        else if(strcmp(token, "preop") == 0 || strcmp(token, "preoperational") == 0) {
+//            lastTok(NULL, spaceDelim, &err);
+//            if(err == 0 && comm_node > 127) {
+//                err = 1;
+//                respErrorCode = respErrorNoDefaultNodeSet;
+//            }
+//            if(err == 0) {
+//                err = CO_sendNMTcommand(CO, CO_NMT_ENTER_PRE_OPERATIONAL, comm_node) ? 1:0;
+//                if(err == 0) respLen = sprintf(resp, "[%d] OK", sequence);
+//            }
+//        }
 
-        /* NMT reset (node or communication) */
-        else if(strcmp(token, "reset") == 0) {
+//        /* NMT reset (node or communication) */
+//        else if(strcmp(token, "reset") == 0) {
 
-            token = getTok(NULL, spaceDelim, &err);
-            if(err == 0 && comm_node > 127) {
-                err = 1;
-                respErrorCode = respErrorNoDefaultNodeSet;
-            }
-            if(err == 0) {
-                if(strcmp(token, "node") == 0) {
-                    lastTok(NULL, spaceDelim, &err);
-                    if(err == 0) {
-                        err = CO_sendNMTcommand(CO, CO_NMT_RESET_NODE, comm_node) ? 1:0;
-                        if(err == 0) respLen = sprintf(resp, "[%d] OK", sequence);
-                    }
-                }
-                else if(strcmp(token, "comm") == 0 || strcmp(token, "communication") == 0) {
-                    lastTok(NULL, spaceDelim, &err);
-                    if(err == 0) {
-                        err = CO_sendNMTcommand(CO, CO_NMT_RESET_COMMUNICATION, comm_node) ? 1:0;
-                        if(err == 0) respLen = sprintf(resp, "[%d] OK", sequence);
-                    }
-                }
+//            token = getTok(NULL, spaceDelim, &err);
+//            if(err == 0 && comm_node > 127) {
+//                err = 1;
+//                respErrorCode = respErrorNoDefaultNodeSet;
+//            }
+//            if(err == 0) {
+//                if(strcmp(token, "node") == 0) {
+//                    lastTok(NULL, spaceDelim, &err);
+//                    if(err == 0) {
+//                        err = CO_sendNMTcommand(CO, CO_NMT_RESET_NODE, comm_node) ? 1:0;
+//                        if(err == 0) respLen = sprintf(resp, "[%d] OK", sequence);
+//                    }
+//                }
+//                else if(strcmp(token, "comm") == 0 || strcmp(token, "communication") == 0) {
+//                    lastTok(NULL, spaceDelim, &err);
+//                    if(err == 0) {
+//                        err = CO_sendNMTcommand(CO, CO_NMT_RESET_COMMUNICATION, comm_node) ? 1:0;
+//                        if(err == 0) respLen = sprintf(resp, "[%d] OK", sequence);
+//                    }
+//                }
 
-                else {
-                    err = 1;
-                }
-            }
-        }
+//                else {
+//                    err = 1;
+//                }
+//            }
+//        }
 
         /* set command - multiple settings */
         else if(strcmp(token, "set") == 0) {

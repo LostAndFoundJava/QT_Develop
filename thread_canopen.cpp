@@ -125,6 +125,7 @@ void Thread_CANopen::run(){
 
     char* CANdevice = NULL;         /* CAN device, configurable by arguments. */
     int nodeId = -1;                /* Set to 1..127 by arguments */
+    UNSIGNED16 canbitrate=0;
     bool_t rebootEnable = false;    /* Configurable by arguments */
 #ifndef CO_SINGLE_THREAD
 //        bool_t commandEnable = false;   /* Configurable by arguments */
@@ -164,7 +165,9 @@ void Thread_CANopen::run(){
 //            CANdevice0Index = if_nametoindex(CANdevice);
 //        }
 
-    nodeId=3;
+    nodeId=2;
+    canbitrate=CO_OD_ROM.CANBitRate;
+    CANdevice0Index = if_nametoindex(CANdevice);
     rtPriority=2;
     //CANdevice0Index=1;
 
@@ -246,7 +249,7 @@ void Thread_CANopen::run(){
 
 
         /* initialize CANopen */
-        err = CO_init(CANdevice0Index, nodeId, 0);
+        err = CO_init(CANdevice0Index, nodeId, canbitrate);
         if(err != CO_ERROR_NO) {
             char s[120];
             snprintf(s, 120, "Communication reset - CANopen initialization failed, err=%d", err);
