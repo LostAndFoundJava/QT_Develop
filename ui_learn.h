@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'learn.ui'
 **
-** Created: Sat Apr 8 18:49:24 2017
+** Created: Sat Apr 8 22:29:47 2017
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
