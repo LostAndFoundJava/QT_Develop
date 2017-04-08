@@ -27,7 +27,6 @@
 
 #include "application.h"
 
-
 /******************************************************************************/
 void app_programStart(void){
 
@@ -54,5 +53,6 @@ void app_programAsync(uint16_t timer1msDiff){
 
 /******************************************************************************/
 void app_program1ms(void){
+
 
 }

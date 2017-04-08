@@ -5,6 +5,7 @@
 #include <sys/time.h>
 #include <time.h>
 #include <globl_data.h>
+
 //#include <stdio.h>
 //#include <stdlib.h>
 //#include <unistd.h>
@@ -60,6 +61,7 @@ MainWindow::MainWindow(QWidget *parent) :
     timer->start(500);
 
     management = new Management;
+
 }
 
 MainWindow::~MainWindow()

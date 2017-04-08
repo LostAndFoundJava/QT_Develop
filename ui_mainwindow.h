@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Sat Apr 8 18:49:24 2017
+** Created: Sun Apr 9 01:14:36 2017
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -42,6 +42,7 @@ public:
     QLabel *ProNum;
     QLabel *ProName;
     QPushButton *Jur_And_User;
+    QLabel *label;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -175,6 +176,9 @@ public:
         Jur_And_User->setStyleSheet(QString::fromUtf8("background-color: rgb(83, 148, 160);\n"
 "color: rgb(255, 250, 240);\n"
 "border-radius:5px;"));
+        label = new QLabel(centralWidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(270, 20, 66, 17));
         MainWindow->setCentralWidget(centralWidget);
 
         retranslateUi(MainWindow);
@@ -201,6 +205,7 @@ public:
         ProNum->setText(QApplication::translate("MainWindow", "\344\272\247\345\223\201\347\274\226\345\217\267", 0, QApplication::UnicodeUTF8));
         ProName->setText(QApplication::translate("MainWindow", "\344\272\247\345\223\201\345\220\215\347\247\260", 0, QApplication::UnicodeUTF8));
         Jur_And_User->setText(QApplication::translate("MainWindow", "\346\235\203\351\231\220/\347\224\250\346\210\267\345\220\215", 0, QApplication::UnicodeUTF8));
+        label->setText(QApplication::translate("MainWindow", "TextLabel", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };
