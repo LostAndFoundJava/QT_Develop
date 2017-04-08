@@ -1,0 +1,9 @@
+/debug/*
+/release/*
+Bofeng.pro.user
+*.o
+ui_*
+moc*
+Makefile*
+*Debug
+*Release
