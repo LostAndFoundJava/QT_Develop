@@ -46,5 +46,7 @@ int main(int argc, char *argv[])
     splash->finish(&w);
     delete splash;
 
+    int input= CO_OD_RAM.readInput8Bit[0];
+
     return a.exec();
 }
