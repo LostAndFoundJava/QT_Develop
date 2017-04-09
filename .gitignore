@@ -4,6 +4,7 @@ Bofeng.pro.user
 *.o
 ui_*
 moc*
-Makefile*
+Makefile.*
 *Debug
 *Release
+QT_Develop.pro.user
