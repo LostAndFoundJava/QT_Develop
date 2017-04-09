@@ -95,8 +95,7 @@ SOURCES += application.c \
            thread_canopen.cpp \
            varify.cpp \
            widget.cpp
-RESOURCES += Bofeng.qrc \
-    Bofeng.qrc
+RESOURCES += Bofeng.qrc
 OTHER_FILES +=
 QT += sql
 QT += core
