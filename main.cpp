@@ -48,12 +48,8 @@ int main(int argc, char *argv[])
     splash->finish(&w);
     delete splash;
 
-//    while(1){
-//        char string[25];
-//        sprintf(string,"%d",input);
-//        qDebug(string);
-//        input = CO_OD_RAM.readInput8Bit[0];
-//    }
+    //sprintf(str,"%d",CO_OD_RAM.readInput8Bit[0]);
+    //qDebug(str);
 
     return a.exec();
 }
