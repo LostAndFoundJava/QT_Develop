@@ -102,7 +102,7 @@ void Thread_CANopen::run(){
 //    int opt;
     bool_t firstRun = true;
 
-    char* CANdevice = NULL;         /* CAN device, configurable by arguments. */
+    char* CANdevice = "can0";         /* CAN device, configurable by arguments. */
     int nodeId = -1;                /* Set to 1..127 by arguments */
     UNSIGNED16 canbitrate=0;
     bool_t rebootEnable = false;    /* Configurable by arguments */

@@ -1,8 +1,8 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'widget.h'
 **
-** Created: Sat Apr 8 22:31:26 2017
-**      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
+** Created: Sat Apr 8 23:14:56 2017
+**      by: The Qt Meta Object Compiler version 62 (Qt 4.7.3)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -10,8 +10,8 @@
 #include "widget.h"
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'widget.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 63
-#error "This file was generated using the moc from 4.8.1. It"
+#elif Q_MOC_OUTPUT_REVISION != 62
+#error "This file was generated using the moc from 4.7.3. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -20,7 +20,7 @@ QT_BEGIN_MOC_NAMESPACE
 static const uint qt_meta_data_Widget[] = {
 
  // content:
-       6,       // revision
+       5,       // revision
        0,       // classname
        0,    0, // classinfo
        3,   14, // methods
@@ -48,27 +48,9 @@ static const char qt_meta_stringdata_Widget[] = {
     ",double,double,double,double,double,double,double,double)\0"
 };
 
-void Widget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
-{
-    if (_c == QMetaObject::InvokeMetaMethod) {
-        Q_ASSERT(staticMetaObject.cast(_o));
-        Widget *_t = static_cast<Widget *>(_o);
-        switch (_id) {
-        case 0: _t->dotsSignal((*reinterpret_cast< QList<double>(*)>(_a[1]))); break;
-        case 1: _t->on_horizontalSlider_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 2: _t->getData((*reinterpret_cast< double(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3])),(*reinterpret_cast< double(*)>(_a[4])),(*reinterpret_cast< double(*)>(_a[5])),(*reinterpret_cast< double(*)>(_a[6])),(*reinterpret_cast< double(*)>(_a[7])),(*reinterpret_cast< double(*)>(_a[8])),(*reinterpret_cast< double(*)>(_a[9])),(*reinterpret_cast< double(*)>(_a[10])),(*reinterpret_cast< double(*)>(_a[11])),(*reinterpret_cast< double(*)>(_a[12])),(*reinterpret_cast< double(*)>(_a[13])),(*reinterpret_cast< double(*)>(_a[14])),(*reinterpret_cast< double(*)>(_a[15])),(*reinterpret_cast< double(*)>(_a[16])),(*reinterpret_cast< double(*)>(_a[17]))); break;
-        default: ;
-        }
-    }
-}
-
-const QMetaObjectExtraData Widget::staticMetaObjectExtraData = {
-    0,  qt_static_metacall 
-};
-
 const QMetaObject Widget::staticMetaObject = {
     { &QWidget::staticMetaObject, qt_meta_stringdata_Widget,
-      qt_meta_data_Widget, &staticMetaObjectExtraData }
+      qt_meta_data_Widget, 0 }
 };
 
 #ifdef Q_NO_DATA_RELOCATION
@@ -94,8 +76,12 @@ int Widget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
-            qt_static_metacall(this, _c, _id, _a);
+        switch (_id) {
+        case 0: dotsSignal((*reinterpret_cast< QList<double>(*)>(_a[1]))); break;
+        case 1: on_horizontalSlider_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 2: getData((*reinterpret_cast< double(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3])),(*reinterpret_cast< double(*)>(_a[4])),(*reinterpret_cast< double(*)>(_a[5])),(*reinterpret_cast< double(*)>(_a[6])),(*reinterpret_cast< double(*)>(_a[7])),(*reinterpret_cast< double(*)>(_a[8])),(*reinterpret_cast< double(*)>(_a[9])),(*reinterpret_cast< double(*)>(_a[10])),(*reinterpret_cast< double(*)>(_a[11])),(*reinterpret_cast< double(*)>(_a[12])),(*reinterpret_cast< double(*)>(_a[13])),(*reinterpret_cast< double(*)>(_a[14])),(*reinterpret_cast< double(*)>(_a[15])),(*reinterpret_cast< double(*)>(_a[16])),(*reinterpret_cast< double(*)>(_a[17]))); break;
+        default: ;
+        }
         _id -= 3;
     }
     return _id;
