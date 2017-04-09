@@ -7,11 +7,13 @@
 #include <QDesktopWidget>
 #include <globl_data.h>
 #include "thread_canopen.h"
+
+
 MainWindow *w;
 int main(int argc, char *argv[])
 {
     Thread_CANopen *canopen_slave = new Thread_CANopen();
-    canopen_slave->start();
+    //canopen_slave->start();
     QApplication a(argc, argv);
 //    QTextCodec *codec = QTextCodec::codecForName("GB2312");
 //    QTextCodec::setCodecForTr(codec);
@@ -46,7 +48,8 @@ int main(int argc, char *argv[])
     splash->finish(&w);
     delete splash;
 
-    int input= CO_OD_RAM.readInput8Bit[0];
+    //sprintf(str,"%d",CO_OD_RAM.readInput8Bit[0]);
+    //qDebug(str);
 
     return a.exec();
 }
